@@ -1,0 +1,233 @@
+/* ==== Font ==== */
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;700&family=Open+Sans:wght@800&display=swap');
+
+
+/* ==== Root ==== */
+:root{
+
+    /* === colors === */
+    --primary-light: #868EF9;
+    --secondary-light: #F1E546;
+    --text-light: #090D31;
+    --primary-dark: #071088;
+    --secondary-dark: #F7EC64;
+    --Text-dark: #6E77F7;
+
+    /* === typografi === */
+    --header-font-1: 'Open Sans', sans-serif;
+    --size-super: 76px;
+    --size-sub: 22px;
+    --size-1: 47px;
+    --size-2: 29px;
+
+    --bodytext-font-2: 'Bitter', serif;
+    --text-1: 18px;
+    --sub-text: 14px;
+
+    /* === space === */
+    --space-element: 28px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.container{
+    /* border: 1px solid violet; */
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "nav nav nav nav"
+        "main main main main"
+        "footer footer footer footer";
+    row-gap: 28px;
+}
+
+/* ==== awal navigasi ==== */
+.container nav{
+    /* border: 1px solid violet; */
+
+    grid-area: nav;
+
+    display: grid;
+    padding: 23px 40px;
+    background-color: var(--primary-light);
+    border-radius: 0 0 10px 10px;
+
+    grid-template-rows: 1fr;
+    grid-template-columns: 150px 3fr 0;
+    grid-template-areas: 
+        'logo menu optional';
+    
+}
+
+.container nav .nav__logo{
+    grid-area: logo;
+    
+    align-self: center;
+}
+
+.container nav .nav__logo .logo_desktop{
+    width: 123px;
+    height: 49px;
+}
+
+.container nav .nav__logo .logo_Mobile{
+    display: none;
+}
+
+.container nav .nav__menu{
+    grid-area: menu;
+
+    align-self: center;
+    justify-self: end;
+}
+
+.container nav .nav__menu ul{
+    display: flex;
+}
+
+.container nav .nav__menu ul li{
+    margin: 0 10px;   
+}
+
+.container nav .nav__menu ul li .nav__link{
+    /* border: 1px solid violet; */
+
+    padding: 17px 30px;
+    font-size: var(--text-1);
+    color: var(--text-light);
+    transition: .3s;
+}
+
+.container nav .nav__menu ul li .nav__link:hover{
+    background-color: var(--secondary-light);
+    border-radius: 0 0 5px 5px;
+}
+
+.container nav .nav__optional{
+    grid-area: optional;
+
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr;    
+}
+
+.container nav .nav__optional .Burger_menu{
+    justify-self: center;
+    display: none;
+}
+
+/* .container nav .nav__optional .toggle_theme{
+    justify-self: center;
+    align-self: center;
+} */
+
+ion-icon{
+    font-size: 50px;
+}
+/* ==== akhir navigasi ==== */
+
+/* main */
+.container main{
+    grid-area: main;
+}
+
+.container footer{
+    grid-area: footer;
+}
+
+@media (max-width: 768px){
+   
+    .container nav{
+        padding: 23px 20px;
+        grid-template-rows: 1fr;
+        grid-template-columns: 150px 2fr ;
+        grid-template-areas: 
+            'logo optional'
+            'menu menu';
+    }
+
+    .container nav .nav__logo .logo_desktop{
+        display: none;
+    }
+    
+    .container nav .nav__logo .logo_Mobile{
+        display: block;
+        width: 35px;
+        height: 30px;
+        position: relative;
+        top: 14px;
+    }
+
+    .container nav .nav__menu{
+        grid-area: menu;
+    
+        align-self: center;
+        justify-self: center;
+        display: none;
+    }
+    
+    .container nav .nav__menu.active{
+        display: block;
+        transition: .5s ease-in-out;
+    }
+
+    .container nav .nav__menu ul{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container nav .nav__menu ul li{
+        /* border: 1px solid violet;  */
+
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .container nav .nav__menu ul li .nav__link{
+        /* border: 1px solid violet; */
+    
+        padding: 20px 50vh;
+        transition: .5s ease;
+    }
+    
+    .container nav .nav__menu ul li .nav__link:hover{
+        background-color: var(--secondary-light);
+    }
+
+    .container nav .nav__optional{
+        grid-area: optional;
+    }
+
+    .container nav .nav__optional .Burger_menu{
+        justify-self: end;
+
+
+        display: block;
+        cursor: pointer;
+    }
+
+    ion-icon{
+        font-size: 35px;
+    }
+}
+
+/* @media (max-width: 768px){
+
+}
+
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 1200px){
+
+} */
+
