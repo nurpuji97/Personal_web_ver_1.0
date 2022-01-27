@@ -41,12 +41,13 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 60% 20%;
+    grid-template-rows: 94px 1fr 131px;
     grid-template-areas: 
-        "nav nav nav"
-        "main main main"
-        "footer footer footer";
+        'nav nav nav'
+        'main main main'
+        'footer footer footer';
     row-gap: 28px;
+
 }
 
 /* ==== awal navigasi ==== */
@@ -76,8 +77,9 @@
 
     /* === logo desktop === */
     .container nav .nav__logo .logo_desktop{
-        width: 123px;
-        height: 49px;
+        width: 115px;
+        height: 45px;
+        object-fit: cover;
     }
 
     /* === logo mobile === */
@@ -144,60 +146,216 @@
 /* ==== akhir navigasi ==== */
 
 /* === awal main === */
-.container main{
-    grid-area: main;
+    .container main{
+        grid-area: main;
 
-    /* border: 1px solid violet; */
+        width: 100%;
 
-    /* background-color: var(--primary-light); */
-}
+    }
 
-.container main .hero{
-    border: 1px solid violet;
-    
-    border-radius: 10px;
-    background-color: var(--primary-light);
-    padding: 120px 0;
-}
+    /* === awal hero === */
 
-.container main .hero .header_hero{
-    font-family: var(--header-font-1);
-    font-size: var(--size-super);
-    color: var(--text-light);
-    text-align: center;
-    line-height: auto;
-}
+    .container main .hero{
+        /* border: 1px solid violet; */
+        
+        border-radius: 10px;
+        background-color: var(--primary-light);
+        padding: 120px 0;
+        width: 100%;
+        position: relative;
+    }
 
-.container main .hero .header_text{
-    font-family: var(--header-font-1);
-    font-size: var(--size-1);
-    color: var(--text-light);
-    text-align: center;
-    line-height: 76px;
-    margin-top: 22px;
-    margin-bottom: 51px;
-}
+    .container main .hero .header_hero{
+        font-family: var(--header-font-1);
+        font-size: var(--size-super);
+        color: var(--text-light);
+        text-align: center;
+        line-height: auto;
+    }
 
-.container main .hero div{
-    display: flex;
-    justify-content: center;
-}
+    .container main .hero .header_text{
+        font-family: var(--header-font-1);
+        font-size: var(--size-1);
+        color: var(--text-light);
+        text-align: center;
+        line-height: 76px;
+        margin-top: 22px;
+        margin-bottom: 51px;
+    }
 
-.container main .hero .button_hero{
-    background-color: var(--secondary-light);
-    font-family: var(--bodytext-font-2);
-    font-size: var(--text-1);
-    color: var(--text-light);
-    display: inline-block;
-    padding: 8px 35px;
-    line-height: 29px;
-    border-radius: 5px;
-}
+    .container main .hero div{
+        display: flex;
+        justify-content: center;
+    }
 
-.container main .hero .button_hero:hover{
-    background-color: var(--secondary-dark);
-    font-weight: bold;
-}
+    .container main .hero .button_hero{
+        background-color: var(--secondary-light);
+        font-family: var(--bodytext-font-2);
+        font-size: var(--text-1);
+        color: var(--text-light);
+        display: inline-block;
+        padding: 8px 35px;
+        line-height: 29px;
+        border-radius: 5px;
+    }
+
+    .container main .hero .button_hero:hover{
+        background-color: var(--secondary-dark);
+        font-weight: bold;
+    }
+
+    /* === akhir hero === */
+
+    /* === awal detail === */
+    .container main .detail{
+        margin: 25px auto;
+        display: flex;
+        justify-content: space-evenly; 
+        align-content: center;
+    }
+
+
+    .container main .detail .detail_project .angka_detail,
+    .container main .detail .detail_testimoni .angka_detail{
+        text-align: center;
+        font-weight: bold;
+        margin-top: 5px;
+        font-family: var(--bodytext-font-2);
+        font-size: var(--size-2);
+        color: var(--text-light);
+    }
+
+    .container main .detail .detail_project .text_detail,
+    .container main .detail .detail_testimoni .text_detail{
+        margin-top: 5px;
+    }
+
+    /* === akhir detail === */
+
+    /* ==== awal testimoni ==== */
+    .container main .Testimoni{
+        margin: 80px 10px 80px 40px;
+
+        /* border: 1px solid violet; */
+    }
+
+    .container main .Testimoni .header_testomini{
+        font-family: var(--header-font-1);
+        font-size: var(--size-2);
+        color: var(--text-light);
+        font-weight: bold;
+        line-height: 47px;
+        margin-bottom: 30px;
+    }
+
+        /* ==== awal card ==== */
+
+        .container main .Testimoni .card_container{
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            padding-bottom: 40px;
+            margin: 0;
+
+            /* background: coral; */
+            /* border: 1px solid violet; */
+            
+        }
+
+        .container main .Testimoni .card_container .swiper{
+            width: 100%;
+
+            /* background: blanchedalmond; */
+        }
+
+        .container main .Testimoni .card_container .swiper .section{
+            position: relative;
+            width: 100%;
+        }
+
+        .container main .Testimoni .card_container .swiper .section .card_content{
+            /* border: 1px solid violet; */
+
+            width: 375px;
+            border-radius: 10px;
+            padding: 30px 20px;
+            background-color: var(--primary-light);
+        }
+
+        .container main .Testimoni .card_container .swiper .section .card_content .profile-card{
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .container main .Testimoni .card_container .swiper .section .card_content .profile-card .image_profile-card{
+            width: 82px;
+            height: 82px;
+            margin-right: 10px;
+        }
+
+        .container main .Testimoni .card_container .swiper .section .card_content .profile-card .image_profile-card img{
+            width: 82px;
+            height: 82px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .container main .Testimoni .card_container .swiper .section .card_content .profile-card .title_profile-card{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container main .Testimoni .card_container .swiper .section .card_content .profile-card .title_profile-card .nama_profile{
+            font-family: var(--bodytext-font-2);
+            font-size: var(--text-1);
+            color: var(--text-light);
+            font-weight: 700;
+            margin: 5px auto;
+        }
+
+        .container main .Testimoni .card_container .swiper .section .card_content .profile-card .title_profile-card .profesi{
+            font-family: var(--bodytext-font-2);
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        .container main .Testimoni .card_container .swiper .section .card_content .body-card{
+            font-family: var(--bodytext-font-2);
+            font-size: var(--sub-text);
+            line-height: 18px;
+            font-style: italic;
+        }
+
+        /* ==== akhir card ==== */
+
+    /* ==== akhir testimoni ==== */
+
+    /* == library swiper css == */
+
+    .container main .Testimoni .card_container .swiper-pagination-bullet{
+        background: var(--text-light);
+    }
+
+    .swiper-button-next{
+        margin-right: 25px;
+    }
+
+    .swiper-button-prev{
+        margin-left: -10px;
+    }
+
+    .swiper-button-next, .swiper-button-prev{
+        opacity: .6;
+        color: var(--primary-light);
+        transition: all .3s ease;
+    }
+
+    .swiper-button-next:hover, .swiper-button-prev:hover{
+        opacity: 1;
+        color: var(--primary-dark);
+    }
+
 /* === akhir main ===*/
 
 /* ==== awal footer ==== */
@@ -345,6 +503,19 @@
         display: flex;
         justify-content: start;
     }
+
+    .container main .detail ion-icon{
+        font-size: 30px;
+    }
+
+
+    /* card */
+    
+
+     /* .container main .Testimoni{
+        margin: 80px 20px;
+    } */
+
     /* ==== akhir Main ==== */
 
 
@@ -354,6 +525,7 @@
     /* ==== Icon ==== */
     ion-icon{
         font-size: 35px;
+        color: var(--text-light);
     }
 }
 
