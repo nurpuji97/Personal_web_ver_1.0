@@ -165,6 +165,7 @@
         position: relative;
     }
 
+    /* == header hero == */
     .container main .hero .header_hero{
         font-family: var(--header-font-1);
         font-size: var(--size-super);
@@ -173,6 +174,7 @@
         line-height: auto;
     }
 
+    /* == header text == */
     .container main .hero .header_text{
         font-family: var(--header-font-1);
         font-size: var(--size-1);
@@ -188,6 +190,7 @@
         justify-content: center;
     }
 
+    /* == button hero == */
     .container main .hero .button_hero{
         background-color: var(--secondary-light);
         font-family: var(--bodytext-font-2);
@@ -214,7 +217,7 @@
         align-content: center;
     }
 
-
+    /* == angka detail == */
     .container main .detail .detail_project .angka_detail,
     .container main .detail .detail_testimoni .angka_detail{
         text-align: center;
@@ -225,6 +228,7 @@
         color: var(--text-light);
     }
 
+    /* == test detail == */
     .container main .detail .detail_project .text_detail,
     .container main .detail .detail_testimoni .text_detail{
         margin-top: 5px;
@@ -250,31 +254,20 @@
 
         /* ==== awal card ==== */
 
-        .container main .Testimoni .card_container{
+        .card_container{
             position: relative;
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            padding-bottom: 40px;
-            margin: 0;
-
-            /* background: coral; */
-            /* border: 1px solid violet; */
-            
         }
 
-        .container main .Testimoni .card_container .swiper{
+        /* == swiper == */
+        .card_container .swiper{
             width: 100%;
+            height: 100%;
 
             /* background: blanchedalmond; */
         }
 
-        .container main .Testimoni .card_container .swiper .section{
-            position: relative;
-            width: 100%;
-        }
-
-        .container main .Testimoni .card_container .swiper .section .card_content{
+        /* == card content ==*/
+        .card_container .swiper .card_content{
             /* border: 1px solid violet; */
 
             width: 375px;
@@ -283,30 +276,35 @@
             background-color: var(--primary-light);
         }
 
-        .container main .Testimoni .card_container .swiper .section .card_content .profile-card{
+        /* == profile card == */
+        .card_container .swiper .card_content .profile-card{
             display: flex;
             margin-bottom: 15px;
         }
 
-        .container main .Testimoni .card_container .swiper .section .card_content .profile-card .image_profile-card{
+        /* == image profile == */
+        .card_container .swiper .card_content .profile-card .image_profile-card{
             width: 82px;
             height: 82px;
             margin-right: 10px;
         }
 
-        .container main .Testimoni .card_container .swiper .section .card_content .profile-card .image_profile-card img{
+        /* == image profile img == */
+        .card_container .swiper .card_content .profile-card .image_profile-card img{
             width: 82px;
             height: 82px;
             object-fit: cover;
             border-radius: 5px;
         }
 
-        .container main .Testimoni .card_container .swiper .section .card_content .profile-card .title_profile-card{
+        /* == title profile == */
+        .card_container .swiper .card_content .profile-card .title_profile-card{
             display: flex;
             flex-direction: column;
         }
 
-        .container main .Testimoni .card_container .swiper .section .card_content .profile-card .title_profile-card .nama_profile{
+        /* == nama profile == */
+        .card_container .swiper .card_content .profile-card .title_profile-card .nama_profile{
             font-family: var(--bodytext-font-2);
             font-size: var(--text-1);
             color: var(--text-light);
@@ -314,33 +312,37 @@
             margin: 5px auto;
         }
 
-        .container main .Testimoni .card_container .swiper .section .card_content .profile-card .title_profile-card .profesi{
+        /* == profesi == */
+        .card_container .swiper .card_content .profile-card .title_profile-card .profesi{
             font-family: var(--bodytext-font-2);
             font-size: 15px;
             font-weight: 300;
         }
 
-        .container main .Testimoni .card_container .swiper .section .card_content .body-card{
+        /* body card */
+        .card_container .swiper .card_content .body-card{
             font-family: var(--bodytext-font-2);
             font-size: var(--sub-text);
             line-height: 18px;
             font-style: italic;
+            margin-top: 20px;
         }
 
         /* ==== akhir card ==== */
 
     /* ==== akhir testimoni ==== */
 
-    /* == library swiper css == */
-
+    /* +++ awal library swiper css ++ */
     .container main .Testimoni .card_container .swiper-pagination-bullet{
         background: var(--text-light);
     }
 
-    .swiper-button-next{
-        margin-right: 25px;
+    /* pagination */
+    .swiper-pagination{
+        top: 250px;
     }
 
+    /* button */
     .swiper-button-prev{
         margin-left: -10px;
     }
@@ -355,6 +357,7 @@
         opacity: 1;
         color: var(--primary-dark);
     }
+    /* +++ ahkir library swiper css ++ */
 
 /* === akhir main ===*/
 
@@ -389,12 +392,12 @@
 
 @media (max-width: 768px){
    
-    /* container */
+    /* ==== container ====*/
     .container{
         /* border: 1px solid violet; */
     
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 100%;
+        grid-template-rows: 130px 75% 1fr;
         grid-template-areas: 
             "nav"
             "main"
@@ -437,6 +440,14 @@
             .container nav .nav__menu.active{
                 display: block;
                 transition: .5s ease-in-out;
+
+                position: absolute;
+                top: 123px;
+                z-index: 10;
+                box-shadow: 0px 17px 14px 3px rgba(0,0,0,0.52);
+                -webkit-box-shadow: 0px 17px 14px 3px rgba(0,0,0,0.52);
+                -moz-box-shadow: 0px 17px 14px 3px rgba(0,0,0,0.52);
+                background-color: var(--primary-light);
             }
 
             .container nav .nav__menu ul{
@@ -480,67 +491,79 @@
     /* ==== akhir Navbar ==== */
 
     /* ==== awal Main ==== */
-    .container main .hero{
-        padding: 120px 20px;
-    }
 
-    .container main .hero .header_hero{
-        font-size: var(--size-2);
-        text-align: left;
-        line-height: 74px;
-    }
-    
-    .container main .hero .header_text{
-        font-size: var(--text-1);
-        text-align: left;
-        font-weight: 500;
-        line-height: 29px;
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
+        /* === awal hero === */
+        .container main .hero{
+            padding: 120px 20px;
+        }
 
-    .container main .hero div{
-        display: flex;
-        justify-content: start;
-    }
+        .container main .hero .header_hero{
+            font-size: var(--size-2);
+            text-align: left;
+            line-height: 74px;
+        }
+        
+        .container main .hero .header_text{
+            font-size: var(--text-1);
+            text-align: left;
+            font-weight: 500;
+            line-height: 29px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
 
-    .container main .detail ion-icon{
-        font-size: 30px;
-    }
+        .container main .hero div{
+            display: flex;
+            justify-content: start;
+        }
+        /* === ahkir hero === */
 
+        /* === angka detail === */
+        .container main .detail .detail_project .angka_detail,
+        .container main .detail .detail_testimoni .angka_detail{
+                text-align: center;
+                font-weight: bold;
+                font-size: var(--text-1);
+        }
 
-    /* card */
-    
+        /* === awal testimoni === */
+        .container main .Testimoni{
+            margin: 80px 20px;
+        }
 
-     /* .container main .Testimoni{
-        margin: 80px 20px;
-    } */
+        /* === card ===*/
+        .card_container{
+            margin-right: 10px;
+        }
+
+        /* librari swiper js */
+        .swiper-button-next, .swiper-button-prev{
+            display: none;
+        }
+
+        .swiper-pagination{
+            top: 230px;
+            display: none;
+        }
 
     /* ==== akhir Main ==== */
 
 
-    /* ==== Footer ==== */
+    /* ==== awal Footer ==== */
+    
+        /* tidak ada */
+
+    /* ==== akhir Footer ==== */
 
 
-    /* ==== Icon ==== */
+    /* +++ Icon +++ */
     ion-icon{
         font-size: 35px;
         color: var(--text-light);
     }
 }
 
-/* @media (max-width: 768px){
-
-}
-
-@media (max-width: 992px){
-
-}
-
-@media (max-width: 1200px){
-
-} */
-
+/* +++ icon +++ */
 ion-icon{
     font-size: 50px;
 }
