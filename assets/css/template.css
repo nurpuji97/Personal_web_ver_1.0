@@ -1,0 +1,263 @@
+/* container */
+.container{
+    /* border: 1px solid violet; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 94px 1fr 131px;
+    grid-template-areas: 
+        'nav nav nav'
+        'main main main'
+        'footer footer footer';
+    row-gap: 28px;
+
+}
+
+/* ==== awal navigasi ==== */
+    .container nav{
+        /* border: 1px solid violet; */
+
+        grid-area: nav;
+
+        display: grid;
+        padding: 23px 40px;
+        background-color: var(--primary-light);
+        border-radius: 0 0 10px 10px;
+
+        grid-template-rows: 1fr;
+        grid-template-columns: 150px 3fr 0;
+        grid-template-areas: 
+            'logo menu optional';
+        
+    }
+
+    /* === awal navigasi logo ==- */
+    .container nav .nav__logo{
+        grid-area: logo;
+        
+        align-self: center;
+    }
+
+    /* === logo desktop === */
+    .container nav .nav__logo .logo_desktop{
+        width: 115px;
+        height: 45px;
+        object-fit: cover;
+    }
+
+    /* === logo mobile === */
+    .container nav .nav__logo .logo_Mobile{
+        display: none;
+    }
+    /* === akhir navigasi logo ==- */
+
+
+    /* === awal navigasi menu === */
+    .container nav .nav__menu{
+        grid-area: menu;
+
+        align-self: center;
+        justify-self: end;
+    }
+
+    .container nav .nav__menu ul{
+        display: flex;
+    }
+
+    .container nav .nav__menu ul li{
+        margin: 0 10px;   
+    }
+
+    .container nav .nav__menu ul li .nav__link{
+        /* border: 1px solid violet; */
+
+        padding: 17px 30px;
+        font-size: var(--text-1);
+        color: var(--text-light);
+        transition: .3s ease;
+        font-family: var(--bodytext-font-2);
+    }
+
+    .container nav .nav__menu ul li .nav__link:hover{
+        background-color: var(--secondary-light);
+        border-radius: 0 0 5px 5px;
+    }
+    /* === akhir navigasi menu === */
+
+    /* === awal navigasi optional === */
+    .container nav .nav__optional{
+        grid-area: optional;
+
+        align-self: center;
+        display: grid;
+        grid-template-columns: 1fr;    
+    }
+
+    /* === burger menu === */
+    .container nav .nav__optional .Burger_menu{
+        justify-self: center;
+        display: none;
+    }
+
+    /* .container nav .nav__optional .toggle_theme{
+        justify-self: center;
+        align-self: center;
+    } */
+
+    /* === akhir navigasi optional === */
+
+/* ==== akhir navigasi ==== */
+
+
+/* ==== awal Main ==== */
+
+.container main{
+    grid-area: main;
+
+    width: 100%;
+}
+
+/* ==== akhir main Main ==== */
+
+
+/* ==== awal footer ==== */
+.container footer{
+    grid-area: footer;
+
+    background-color: var(--primary-light);
+    border-radius: 10px 10px 0 0;
+}
+
+/* === body footer === */
+    .container footer .body_footer{
+        margin: 38px 0 38px 0;
+        font-family: var(--bodytext-font-2);
+    }
+
+    /* === header footer === */
+        .container footer .body_footer .header_footer{
+            font-size: var(--text-1);
+            color: var(--text-light);
+            text-align: center;
+        }
+
+    /* === body footer === */
+        .container footer .body_footer .text_footer{
+            text-align: center;
+            font-weight: 200;
+            margin-top: 10px;
+        }
+/* ==== akhir footer ==== */
+
+@media (max-width: 768px){
+
+    /* ==== container ====*/
+    .container{
+        /* border: 1px solid violet; */
+    
+        grid-template-columns: 100%;
+        grid-template-rows: 130px 78% 1fr;
+        grid-template-areas: 
+            "nav"
+            "main"
+            "footer";
+    }
+
+    /* ==== awal Navbar ==== */
+    .container nav{
+        padding: 23px 20px;
+        grid-template-rows: 1fr;
+        grid-template-columns: 150px 2fr ;
+        grid-template-areas: 
+            'logo optional'
+            'menu menu';
+    }
+
+        /* === logo desktop === */
+        .container nav .nav__logo .logo_desktop{
+            display: none;
+        }
+    
+        /* === logo Mobile === */
+        .container nav .nav__logo .logo_Mobile{
+            display: block;
+            width: 35px;
+            height: 30px;
+            position: relative;
+            top: 14px;
+        }
+
+        /* === awal navigation Menu === */
+            .container nav .nav__menu{
+                grid-area: menu;
+            
+                align-self: center;
+                justify-self: center;
+                display: none;
+            }
+            
+            .container nav .nav__menu.active{
+                display: block;
+                transition: .5s ease-in-out;
+
+                position: absolute;
+                top: 123px;
+                z-index: 10;
+                box-shadow: 0px 17px 14px 3px rgba(0,0,0,0.52);
+                -webkit-box-shadow: 0px 17px 14px 3px rgba(0,0,0,0.52);
+                -moz-box-shadow: 0px 17px 14px 3px rgba(0,0,0,0.52);
+                background-color: var(--primary-light);
+            }
+
+            .container nav .nav__menu ul{
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .container nav .nav__menu ul li{
+                /* border: 1px solid violet;  */
+
+                margin-top: 40px;
+                margin-bottom: 30px;
+            }
+
+            .container nav .nav__menu ul li .nav__link{
+                /* border: 1px solid violet; */
+            
+                padding: 20px 50vh;
+                transition: .5s ease;
+            }
+            
+            .container nav .nav__menu ul li .nav__link:hover{
+                background-color: var(--secondary-light);
+            }
+        /* === akhir navigation Menu === */
+
+        /* === awal navigaton optional === */
+            .container nav .nav__optional{
+                grid-area: optional;
+            }
+
+            .container nav .nav__optional .Burger_menu{
+                justify-self: end;
+
+
+                display: block;
+                cursor: pointer;
+            }
+        /* === akhir navigaton optional === */
+
+    /* ==== akhir Navbar ==== */
+
+    /* +++ Icon +++ */
+    ion-icon{
+        font-size: 35px;
+        color: var(--text-light);
+    }
+
+}
+
+/* +++ icon +++ */
+ion-icon{
+    font-size: 50px;
+}

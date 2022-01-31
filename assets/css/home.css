@@ -1,0 +1,278 @@
+@import url('style.css');
+
+
+    /* === awal hero === */
+
+    .container main .hero{
+        /* border: 1px solid violet; */
+        
+        border-radius: 10px;
+        background-color: var(--primary-light);
+        padding: 120px 0;
+        width: 100%;
+        position: relative;
+    }
+
+    /* == header hero == */
+    .container main .hero .header_hero{
+        font-family: var(--header-font-1);
+        font-size: var(--size-super);
+        color: var(--text-light);
+        text-align: center;
+        line-height: auto;
+    }
+
+    /* == header text == */
+    .container main .hero .header_text{
+        font-family: var(--header-font-1);
+        font-size: var(--size-1);
+        color: var(--text-light);
+        text-align: center;
+        line-height: 76px;
+        margin-top: 22px;
+        margin-bottom: 51px;
+    }
+
+    .container main .hero div{
+        display: flex;
+        justify-content: center;
+    }
+
+    /* == button hero == */
+    .container main .hero .button_hero{
+        background-color: var(--secondary-light);
+        font-family: var(--bodytext-font-2);
+        font-size: var(--text-1);
+        color: var(--text-light);
+        display: inline-block;
+        padding: 8px 35px;
+        line-height: 29px;
+        border-radius: 5px;
+    }
+
+    .container main .hero .button_hero:hover{
+        background-color: var(--secondary-dark);
+        font-weight: bold;
+    }
+
+    /* === akhir hero === */
+
+    /* === awal detail === */
+    .container main .detail{
+        margin: 25px auto;
+        display: flex;
+        justify-content: space-evenly; 
+        align-content: center;
+    }
+
+    /* == angka detail == */
+    .container main .detail .detail_project .angka_detail,
+    .container main .detail .detail_testimoni .angka_detail{
+        text-align: center;
+        font-weight: bold;
+        margin-top: 5px;
+        font-family: var(--bodytext-font-2);
+        font-size: var(--size-2);
+        color: var(--text-light);
+    }
+
+    /* == test detail == */
+    .container main .detail .detail_project .text_detail,
+    .container main .detail .detail_testimoni .text_detail{
+        margin-top: 5px;
+    }
+
+    /* === akhir detail === */
+
+    /* ==== awal testimoni ==== */
+    .container main .Testimoni{
+        margin: 80px 10px 80px 40px;
+
+        /* border: 1px solid violet; */
+    }
+
+    .container main .Testimoni .header_testomini{
+        font-family: var(--header-font-1);
+        font-size: var(--size-2);
+        color: var(--text-light);
+        font-weight: bold;
+        line-height: 47px;
+        margin-bottom: 30px;
+    }
+
+        /* ==== awal card ==== */
+
+        .card_container{
+            position: relative;
+        }
+
+        /* == swiper == */
+        .card_container .swiper{
+            width: 100%;
+            height: 100%;
+
+            /* background: blanchedalmond; */
+        }
+
+        /* == card content ==*/
+        .card_container .swiper .card_content{
+            /* border: 1px solid violet; */
+
+            width: 375px;
+            border-radius: 10px;
+            padding: 30px 20px;
+            background-color: var(--primary-light);
+        }
+
+        /* == profile card == */
+        .card_container .swiper .card_content .profile-card{
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        /* == image profile == */
+        .card_container .swiper .card_content .profile-card .image_profile-card{
+            width: 82px;
+            height: 82px;
+            margin-right: 10px;
+        }
+
+        /* == image profile img == */
+        .card_container .swiper .card_content .profile-card .image_profile-card img{
+            width: 82px;
+            height: 82px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* == title profile == */
+        .card_container .swiper .card_content .profile-card .title_profile-card{
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* == nama profile == */
+        .card_container .swiper .card_content .profile-card .title_profile-card .nama_profile{
+            font-family: var(--bodytext-font-2);
+            font-size: var(--text-1);
+            color: var(--text-light);
+            font-weight: 700;
+            margin: 5px auto;
+        }
+
+        /* == profesi == */
+        .card_container .swiper .card_content .profile-card .title_profile-card .profesi{
+            font-family: var(--bodytext-font-2);
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        /* body card */
+        .card_container .swiper .card_content .body-card{
+            font-family: var(--bodytext-font-2);
+            font-size: var(--sub-text);
+            line-height: 18px;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        /* ==== akhir card ==== */
+
+    /* ==== akhir testimoni ==== */
+
+    /* +++ awal library swiper css ++ */
+    .container main .Testimoni .card_container .swiper-pagination-bullet{
+        background: var(--text-light);
+    }
+
+    /* pagination */
+    .swiper-pagination{
+        top: 250px;
+    }
+
+    /* button */
+    .swiper-button-prev{
+        margin-left: -10px;
+    }
+
+    .swiper-button-next, .swiper-button-prev{
+        opacity: .6;
+        color: var(--primary-light);
+        transition: all .3s ease;
+    }
+
+    .swiper-button-next:hover, .swiper-button-prev:hover{
+        opacity: 1;
+        color: var(--primary-dark);
+    }
+    /* +++ ahkir library swiper css ++ */
+
+
+@media (max-width: 768px){
+   
+        /* === awal hero === */
+        .container main .hero{
+            padding: 120px 20px;
+        }
+
+        .container main .hero .header_hero{
+            font-size: var(--size-2);
+            text-align: left;
+            line-height: 74px;
+        }
+        
+        .container main .hero .header_text{
+            font-size: var(--text-1);
+            text-align: left;
+            font-weight: 500;
+            line-height: 29px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .container main .hero div{
+            display: flex;
+            justify-content: start;
+        }
+        /* === ahkir hero === */
+
+        /* === angka detail === */
+        .container main .detail .detail_project .angka_detail,
+        .container main .detail .detail_testimoni .angka_detail{
+                text-align: center;
+                font-weight: bold;
+                font-size: var(--text-1);
+        }
+
+        /* === awal testimoni === */
+        .container main .Testimoni{
+            margin: 80px 20px;
+        }
+
+        /* === card ===*/
+        .card_container{
+            margin-right: 10px;
+        }
+
+        /* librari swiper js */
+        .swiper-button-next, .swiper-button-prev{
+            display: none;
+        }
+
+        .swiper-pagination{
+            top: 230px;
+            display: none;
+        }
+
+
+    /* +++ Icon +++ */
+    ion-icon{
+        font-size: 35px;
+        color: var(--text-light);
+    }
+}
+
+/* +++ icon +++ */
+ion-icon{
+    font-size: 50px;
+}
